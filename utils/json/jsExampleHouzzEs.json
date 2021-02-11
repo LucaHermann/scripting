@@ -1,0 +1,53 @@
+{
+  "userId": 30106639,
+  "professionalId": 1157815,
+  "proType": 46,
+  "reviewRating": 44,
+  "numReviews": 14,
+  "profileCompleteness": 127,
+  "location": "Madrid",
+  "zip": "28046",
+  "isProfessionalProfileCompleted": false,
+  "isDirectVendor": false,
+  "isMarketplaceVendor": false,
+  "isTopSeller": false,
+  "isSponsoredPPCVendor": false,
+  "isVerifiedManufacturer": false,
+  "parentProId": -1,
+  "attributes": {
+    "cmtp": "1",
+    "crme": "1",
+    "crmet": "2020-03-30 12:30:27",
+    "itp": "1"
+  },
+  "firstSpaceIds": [
+    119695545,
+    119696034,
+    119695241,
+    119695052,
+    119694668
+  ],
+  "aboutMe": "Empresa fundada hace 47 años a dedicada a  Mobiliario de Cocina, Hogar, Armarios  y Baño.\r\n\r\nAl tener fábrica propia, nos adaptamos por completo a cualquier diseño siendo nuestro precio muy competitivo al prescindir de intermediarios y ofrecemos 30 años de garantía. \r\n\r\nNuestro showroom está en Pº de la Castellana 236 (Plz. Castilla)",
+  "proTypeDisplayName": "Renovación de cocinas y baños",
+  "formattedPhone": "913 15 23 40",
+  "address": "Paseo Castellana,236 ",
+  "country": "ES",
+  "state": "Madrid",
+  "city": "Madrid",
+  "spaceCount": 193,
+  "address1": "Paseo Castellana,236",
+  "address2": "",
+  "fax": "",
+  "isEnrolledInTradeProgram": false,
+  "seoHint": {
+    "paths": {
+      "ViewProfessional": {
+        "command": "profesionales",
+        "extraSlugs": "renovacion-de-cocinas-y-banos",
+        "titleSlug": "grupo-coeco",
+        "seoPageType": "pfvwes",
+        "indexing": true
+      }
+    }
+  }
+}
