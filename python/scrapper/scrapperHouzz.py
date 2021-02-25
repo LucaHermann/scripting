@@ -1,4 +1,4 @@
-# import requested for srcipt work
+# import requested for script work
 import requests
 import time
 from bs4 import BeautifulSoup
@@ -14,7 +14,7 @@ class colors:  # You may need to change color settings
     BLUE = '\033[34m'
 
 
-URL = 'https://www.houzz.es/professionals/instalacion-y-reformas-de-cocinas-y-banos/c/Madrid/p/240'
+URL = 'https://www.houzz.es/professionals/instalacion-y-reformas-de-cocinas-y-banos/c/Madrid/p/'
 
 # setup selenium
 options = webdriver.ChromeOptions()
