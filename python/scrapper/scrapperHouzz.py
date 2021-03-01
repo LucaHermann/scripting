@@ -43,23 +43,22 @@ for telephone in range(1, nbrTelephones):
 
 html = driver.page_source
 soup = BeautifulSoup(html, features="lxml")
-print(soup)
-# results = soup.find(id='hz-page-content-wrapper')
-# companies_elems = results.find_all("div", class_='hz-pro-search-result__info')
-# # Loop over each elem(1 elem is 1 customer)
-# for company_elem in companies_elems:
-#     company_name_elem = company_elem.find(
-#         'span', class_='header-5 text-unbold mlm')
-#     telephone_number_elem = company_elem.find(
-#         'span', class_='hz-pro-search-result__contact-info')
-#     location_elem = company_elem.find(
-#         'span', class_='hz-pro-search-result__location-info__text')
-#     if None in (company_name_elem, telephone_number_elem, location_elem):
-#         continue
-#     print(colors.RED + 'company_name:' +
-#           colors.ENDC, company_name_elem.text.strip())
-#     print(colors.RED + 'telephone_number' +
-#           colors.ENDC, telephone_number_elem.text.strip())
-#     print(colors.RED + 'location:' + colors.ENDC, location_elem.text.strip())
+results = soup.find(id='hz-page-content-wrapper')
+companies_elems = results.find_all("div", class_='hz-pro-search-result__info')
+# Loop over each elem(1 elem is 1 customer)
+for company_elem in companies_elems:
+    company_name_elem = company_elem.find(
+        'span', class_='header-5 text-unbold mlm')
+    telephone_number_elem = company_elem.find(
+        'span', class_='hz-pro-search-result__contact-info')
+    location_elem = company_elem.find(
+        'span', class_='hz-pro-search-result__location-info__text')
+    if None in (company_name_elem, telephone_number_elem, location_elem):
+        continue
+    print(colors.RED + 'company_name:' +
+          colors.ENDC, company_name_elem.text.strip())
+    print(colors.RED + 'telephone_number' +
+          colors.ENDC, telephone_number_elem.text.strip())
+    print(colors.RED + 'location:' + colors.ENDC, location_elem.text.strip())
 
 driver.close()

@@ -27,8 +27,8 @@ driver.get(URL)
 
 html = driver.page_source
 soup = BeautifulSoup(html, features="lxml")
-print(soup)
-results = soup.find_element_by_class_name("")
+results = soup.body.findAll("a")
+print(results)
 # href_elems = results.find_elements_by_xpath(
 #     "/body/app-root/div/ng-sidebar-container/div/div/app-alphabetical-content/ul/li/a")
 
