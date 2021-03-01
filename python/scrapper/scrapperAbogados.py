@@ -1,8 +1,6 @@
-import requests
 import time
+import requests
 from bs4 import BeautifulSoup
-from selenium import webdriver
-from pprint import pprint
 
 
 class colors:  # You may need to change color settings
@@ -13,27 +11,17 @@ class colors:  # You may need to change color settings
     BLUE = '\033[34m'
 
 
-# todo: finish the automation from a->z then 1->41
-URL = 'https://www.emerita.legal/abogado/'
+URL = "https://www.emerita.legal/abogado/a/"
 
-# setup selenium
-options = webdriver.ChromeOptions()
-options.add_argument('--ignore-certificate-errors')
-options.add_argument('--disable-application-cache')
-options.add_argument('--headless')
-driver = webdriver.Chrome('../utils/chromedriver', options=options)
+headers = {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Max-Age': '3600',
+    'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0'
+}
 
-driver.get(URL)
-
-html = driver.page_source
-soup = BeautifulSoup(html, features="lxml")
-results = soup.body.findAll("a")
-print(results)
-# href_elems = results.find_elements_by_xpath(
-#     "/body/app-root/div/ng-sidebar-container/div/div/app-alphabetical-content/ul/li/a")
-
-# for href_elem in href_elems:
-#     elem = href_elem.find('a')
-#     print(colors.RED + 'href' + elem.strip())
-
-driver.close()
+req = requests.get(URL, headers)
+soup = BeautifulSoup(req.content, 'html.parser')
+res = soup.find_all("li", class_="list-group-item")
+print(res)
